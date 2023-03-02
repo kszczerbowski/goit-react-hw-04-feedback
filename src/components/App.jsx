@@ -18,11 +18,7 @@ export const App = () => {
     const [gradeValue, setGrade] = gradeMap[option];
     setGrade(gradeValue + 1);
   };
-  const options = {
-    good: 'Good',
-    neutral: 'Neutral',
-    bad: 'Bad',
-  };
+  const options = ['Good', 'Neutral', 'Bad'];
   const total = good + neutral + bad;
   const positiveFeedbackPercentage =
     total === 0 ? 0 : Math.round((good / total) * 100);

@@ -3,7 +3,7 @@ import css from './FeedbackOptions.module.css';
 import PropTypes from 'prop-types';
 
 export const FeedbackOptions = ({ options, onLeaveFeedback }) => {
-  return Object.values(options).map(option => {
+  return options.map(option => {
     return (
       <button
         key={option}
@@ -18,6 +18,6 @@ export const FeedbackOptions = ({ options, onLeaveFeedback }) => {
 };
 
 FeedbackOptions.propTypes = {
-  options: PropTypes.object,
+  options: PropTypes.arrayOf(PropTypes.string),
   onLeaveFeedback: PropTypes.func,
 };
